@@ -22,6 +22,7 @@ import '@fontsource-variable/buenard';
 import '@fontsource-variable/caveat';
 import '@fontsource-variable/inter';
 
+
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, EffectFade, Zoom } from 'swiper/modules';
 import 'swiper/css';
@@ -45,7 +46,7 @@ import slide8 from './assets/slide/Project_07.jpg';
 import slide9 from './assets/slide/Project_08.jpg';
 
 import gallery1 from './assets/gallery/OMG_6257.JPG';
-import gallery2 from './assets/gallery/OMG_6737.JPG';
+import gallery2 from './assets/gallery/OMG_6599.png';
 import gallery3 from './assets/gallery/OMG_6898.png';
 import gallery4 from './assets/gallery/OMG_6917.JPG';
 import gallery5 from './assets/gallery/OMG_7060.png';
@@ -303,7 +304,7 @@ function OpenCard({deviceType}) {
                 </Swiper>
               </Box>
             </Box>
-            <Typography sx={{fontFamily:'"Caveat Variable", cursive', color:"black", fontSize:""}}>{lang == "VI" ? "Anh đã đi tìm cả thế giới rộng lớn, nhưng chỉ khi thấy em là anh mới muốn dừng lại." : "oh there you are. i've been looking all over for you"}</Typography>
+            {/* <Typography sx={{fontFamily:'"Caveat Variable", cursive', color:"black", fontSize:""}}>{lang == "VI" ? "Anh đã đi tìm cả thế giới rộng lớn, nhưng chỉ khi thấy em là anh mới muốn dừng lại." : "oh there you are. i've been looking all over for you"}</Typography> */}
             <Divider  width="30%" color="black"/>
 
             <Stack id="time" mt={6} direction="column" alignItems={"center"} sx={{position: 'relative', border:"5px solid #fff3f3", borderRadius:"16px", width: deviceType == "Mobile" ? "96%" : "90%", pt:4, pb:4}} >
@@ -331,12 +332,30 @@ function OpenCard({deviceType}) {
                     <Stack mt={-1} direction="row" justifyContent={"center"} alignItems={"center"} spacing={1} width={deviceType == "Mobile" ? "98%" : "100%"}>
                       <img src={groomEuImg} alt="logo" style={{width: "10%"}}/> 
                       <Stack direction="row" spacing={1} width={"70%"} justifyContent={"center"} alignItems={"center"}>
-                        <Typography sx={{fontFamily: '"Inter Variable", sans-serif', color:"black", fontSize:"2vw",fontWeight:"normal"}}>{lang == "VI" ? "Chúng tôi trân trọng báo tin về lễ thành hôn diễn ra vào ngày" : "We joyfully announce our marriage on"}</Typography>
-                        <Stack  direction="column" alignItems={"center"} mb={0}>
-                          <Typography mt={-2} ml={-1} mb={1} sx={{fontFamily: '"Buenard Variable", serif', color:"#c32b34", fontSize:"2.5vw", fontWeight:"bold"}}>30.11</Typography>
-                          {/* <Typography mt={deviceType == "Mobile" ? -0.5 : -2} sx={{fontFamily: '"Buenard Variable", serif', color:"#c32b34", fontSize:"2.5vw", fontWeight:"bold"}}>―</Typography> */}
-                          <Typography mt={deviceType == "Mobile" ? -0.5 : -2} ml={1} sx={{fontFamily: '"Buenard Variable", serif', color:"#c32b34", fontSize:"2.5vw", fontWeight:"bold"}}>2025</Typography>
-                        </Stack>
+                        {/* <Typography sx={{fontFamily: '"Inter Variable", sans-serif', color:"black", fontSize:"2vw",fontWeight:"normal"}}>{lang == "VI" ? "TRÂN TRỌNG KÍNH MỜI Bạn và người thương Đến dự buổi tiệc chung vui cùng gia đình chúng tôi" : "We joyfully announce our marriage on"}</Typography> */}
+                        {
+                          lang == "VI" ?
+                          (
+                            <Stack direction={"column"} justifyContent={"center"} alignItems={"center"}>
+                            <Typography sx={{fontFamily: '"Inter Variable", sans-serif', color:"black", fontSize:"2vw",fontWeight:"normal"}}>{"TRÂN TRỌNG KÍNH MỜI"}</Typography>
+                            <Typography sx={{fontFamily: '"Inter Variable", sans-serif', color:"black", fontSize:"2vw",fontWeight:"normal"}}>{"Bạn và người thương"}</Typography>
+                            <Typography sx={{fontFamily: '"Inter Variable", sans-serif', color:"black", fontSize:"2vw",fontWeight:"normal"}}>{"Đến dự buổi tiệc chung vui cùng gia đình chúng tôi"}</Typography>
+                            </Stack>
+                          )
+                          :
+                          (
+                            <>
+                            <Typography sx={{fontFamily: '"Inter Variable", sans-serif', color:"black", fontSize:"2vw",fontWeight:"normal"}}>We joyfully announce our marriage on</Typography>
+                            
+                            <Stack  direction="column" alignItems={"center"} mb={0}>
+                              <Typography mt={-2} ml={-1} mb={1} sx={{fontFamily: '"Buenard Variable", serif', color:"#c32b34", fontSize:"2.5vw", fontWeight:"bold"}}>30.11</Typography>
+                              {/* <Typography mt={deviceType == "Mobile" ? -0.5 : -2} sx={{fontFamily: '"Buenard Variable", serif', color:"#c32b34", fontSize:"2.5vw", fontWeight:"bold"}}>―</Typography> */}
+                              <Typography mt={deviceType == "Mobile" ? -0.5 : -2} ml={1} sx={{fontFamily: '"Buenard Variable", serif', color:"#c32b34", fontSize:"2.5vw", fontWeight:"bold"}}>2025</Typography>
+                            </Stack>
+                            </>
+                          )
+                        }
+                        
                       </Stack>
                       <img src={brideEuImg} alt="logo" style={{width:"10%"}}/> 
                     </Stack>
