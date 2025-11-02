@@ -331,37 +331,37 @@ function OpenCard({deviceType}) {
                       <>
                        <Stack direction={"row"} spacing={4} justifyContent={"center"} alignContent={"center"} alignItems={"center"}>
                         <Stack>
-                          <Typography sx={{fontSize: '2vw', fontWeight: 'bold',fontFamily:'"Inter Variable", sans-serif', color:"black"}}>Nhà Trai</Typography>
-                          <Typography sx={{fontSize: '2vw', fontWeight: 'bold',fontFamily:'"Inter Variable", sans-serif', color:"black"}}>Ba: NGUYỄN KIM HOÀN</Typography>
-                          <Typography sx={{fontSize: '2vw', fontWeight: 'bold',fontFamily:'"Inter Variable", sans-serif', color:"black"}}>Mẹ: PHẠM TRẦN MỸ NGỌC</Typography>
-                          <Typography sx={{fontSize: '2vw', fontWeight: 'normal',fontFamily:'"Inter Variable", sans-serif', color:"black"}}>Quận 7, TP. HCM</Typography>
+                          <Typography sx={{fontSize: '2.2vw', fontWeight: 'bold',fontFamily:'"Inter Variable", sans-serif', color:"black"}}>Nhà Trai</Typography>
+                          <Typography sx={{fontSize: '2.2vw', fontWeight: 'bold',fontFamily:'"Inter Variable", sans-serif', color:"black"}}>Ba: NGUYỄN KIM HOÀN</Typography>
+                          <Typography sx={{fontSize: '2.2vw', fontWeight: 'bold',fontFamily:'"Inter Variable", sans-serif', color:"black"}}>Mẹ: PHẠM TRẦN MỸ NGỌC</Typography>
+                          <Typography sx={{fontSize: '2.2vw', fontWeight: 'normal',fontFamily:'"Inter Variable", sans-serif', color:"black"}}>Quận 7, TP. HCM</Typography>
                         </Stack>
                         <Divider  width="4px" orientation='vertical' color="black"/>
                         <Stack>
-                          <Typography sx={{fontSize: '2vw', fontWeight: 'bold',fontFamily:'"Inter Variable", sans-serif', color:"black"}}>Nhà Gái</Typography>
-                          <Typography sx={{fontSize: '2vw', fontWeight: 'bold',fontFamily:'"Inter Variable", sans-serif', color:"black"}}>Bố: CAO ĐĂNG HOAN</Typography>
-                          <Typography sx={{fontSize: '2vw', fontWeight: 'bold',fontFamily:'"Inter Variable", sans-serif', color:"black"}}>Mẹ: NGUYỄN THỊ ĐAM</Typography>
-                          <Typography sx={{fontSize: '2vw', fontWeight: 'normal',fontFamily:'"Inter Variable", sans-serif', color:"black"}}>Hưng Hà, Thái Bình</Typography>
+                          <Typography sx={{fontSize: '2.2vw', fontWeight: 'bold',fontFamily:'"Inter Variable", sans-serif', color:"black"}}>Nhà Gái</Typography>
+                          <Typography sx={{fontSize: '2.2vw', fontWeight: 'bold',fontFamily:'"Inter Variable", sans-serif', color:"black"}}>Bố: CAO ĐĂNG HOAN</Typography>
+                          <Typography sx={{fontSize: '2.2vw', fontWeight: 'bold',fontFamily:'"Inter Variable", sans-serif', color:"black"}}>Mẹ: NGUYỄN THỊ ĐAM</Typography>
+                          <Typography sx={{fontSize: '2.2vw', fontWeight: 'normal',fontFamily:'"Inter Variable", sans-serif', color:"black"}}>Hưng Hà, Thái Bình</Typography>
                         </Stack>
                       </Stack>
-                      <Typography mt={3} mb={3} sx={{ fontSize:"2vw", fontWeight: 'normal',fontFamily:'"Inter Variable", sans-serif', color:"black"}}>TRÂN TRỌNG BÁO TIN LỄ THÀNH HÔN CỦA CON CHÚNG TÔI</Typography>
+                      <Typography mt={3} mb={3} sx={{ fontSize:"2.2vw", fontWeight: 'normal',fontFamily:'"Inter Variable", sans-serif', color:"black"}}>TRÂN TRỌNG BÁO TIN LỄ THÀNH HÔN CỦA CON CHÚNG TÔI</Typography>
                       </>
                       : 
                       <>
                       <Stack direction={"row"} spacing={4} justifyContent={"center"} alignContent={"center"} alignItems={"center"}>
                         <Stack>
-                          <Typography sx={{fontSize: '2vw', fontWeight: 'bold',fontFamily:'"Inter Variable", sans-serif', color:"black"}}>MR NGUYEN KIM HOAN</Typography>
-                          <Typography sx={{fontSize: '2vw', fontWeight: 'bold',fontFamily:'"Inter Variable", sans-serif', color:"black"}}>MRS PHAM TRAN MY NGOC</Typography>
-                          <Typography sx={{fontSize: '2vw', fontWeight: 'normal',fontFamily:'"Inter Variable", sans-serif', color:"black"}}>District 7, HCM City</Typography>
+                          <Typography sx={{fontSize: '2.2vw', fontWeight: 'bold',fontFamily:'"Inter Variable", sans-serif', color:"black"}}>MR NGUYEN KIM HOAN</Typography>
+                          <Typography sx={{fontSize: '2.2vw', fontWeight: 'bold',fontFamily:'"Inter Variable", sans-serif', color:"black"}}>MRS PHAM TRAN MY NGOC</Typography>
+                          <Typography sx={{fontSize: '2.2vw', fontWeight: 'normal',fontFamily:'"Inter Variable", sans-serif', color:"black"}}>District 7, HCM City</Typography>
                         </Stack>
                         <Divider  width="4px" orientation='vertical' color="black"/>
                         <Stack>
-                          <Typography sx={{fontSize: '2vw', fontWeight: 'bold',fontFamily:'"Inter Variable", sans-serif', color:"black"}}>MR CAO DANG HOAN</Typography>
-                          <Typography sx={{fontSize: '2vw', fontWeight: 'bold',fontFamily:'"Inter Variable", sans-serif', color:"black"}}>MRS NGUYEN THI DAM</Typography>
-                          <Typography sx={{fontSize: '2vw', fontWeight: 'normal',fontFamily:'"Inter Variable", sans-serif', color:"black"}}>Hung Ha, Thai Binh</Typography>
+                          <Typography sx={{fontSize: '2.2vw', fontWeight: 'bold',fontFamily:'"Inter Variable", sans-serif', color:"black"}}>MR CAO DANG HOAN</Typography>
+                          <Typography sx={{fontSize: '2.2vw', fontWeight: 'bold',fontFamily:'"Inter Variable", sans-serif', color:"black"}}>MRS NGUYEN THI DAM</Typography>
+                          <Typography sx={{fontSize: '2.2vw', fontWeight: 'normal',fontFamily:'"Inter Variable", sans-serif', color:"black"}}>Hung Ha, Thai Binh</Typography>
                         </Stack>
                       </Stack>
-                      <Typography mt={3} mb={3} sx={{ fontSize:"2vw", fontWeight: 'normal',fontFamily:'"Inter Variable", sans-serif', color:"black"}}>HAVE THE HONOR OF ANNOUNCING THE MARRIAGE OF OUR CHILDREN</Typography>
+                      <Typography mt={3} mb={3} sx={{ fontSize:"2.2vw", fontWeight: 'normal',fontFamily:'"Inter Variable", sans-serif', color:"black"}}>HAVE THE HONOR OF ANNOUNCING THE MARRIAGE OF OUR CHILDREN</Typography>
                       </>
                     }
                    <Divider  width="100%" color="black"/>
@@ -372,7 +372,7 @@ function OpenCard({deviceType}) {
               <Box ref={sectionRefs.section2} id="section2" sx={{display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                 <Grow in={visibleSections.section2} timeout={1000} style={{ transitionDelay: visibleSections.section2 ? '200ms' : '0ms' }}>
                   <div>
-                    <Typography mt={3} sx={{fontFamily: '"Great Vibes", cursive', color:"#d83536", fontSize:"5vw"}}>Đăng Khoa   &   Cao Đào</Typography>
+                    <Typography mt={3} sx={{fontFamily: '"Great Vibes", cursive', color:"#d83536", fontSize:"5.5vw"}}>Đăng Khoa   &   Cao Đào</Typography>
                   </div>
                 </Grow>
               </Box>
@@ -383,15 +383,15 @@ function OpenCard({deviceType}) {
                     <Stack mt={-1} direction="row" justifyContent={"center"} alignItems={"center"} spacing={1} width={deviceType == "Mobile" ? "98%" : "100%"}>
                       <img src={groomEuImg} alt="logo" style={{width: "10%"}}/> 
                       <Stack direction="row" spacing={1} width={"70%"} justifyContent={"center"} alignItems={"center"}>
-                        {/* <Typography sx={{fontFamily: '"Inter Variable", sans-serif', color:"black", fontSize:"2vw",fontWeight:"normal"}}>{lang == "VI" ? "TRÂN TRỌNG KÍNH MỜI Bạn và người thương Đến dự buổi tiệc chung vui cùng gia đình chúng tôi" : "We joyfully announce our marriage on"}</Typography> */}
+                        {/* <Typography sx={{fontFamily: '"Inter Variable", sans-serif', color:"black", fontSize:"2.2vw",fontWeight:"normal"}}>{lang == "VI" ? "TRÂN TRỌNG KÍNH MỜI Bạn và người thương Đến dự buổi tiệc chung vui cùng gia đình chúng tôi" : "We joyfully announce our marriage on"}</Typography> */}
                         {
                           lang == "VI" ?
                           (
                             <>
                               <Stack direction={"column"} justifyContent={"center"} alignItems={"center"}>
-                              <Typography sx={{fontFamily: '"Inter Variable", sans-serif', color:"black", fontSize:"2vw",fontWeight:"normal"}}>{"TRÂN TRỌNG KÍNH MỜI"}</Typography>
-                              <Typography sx={{fontFamily: '"Inter Variable", sans-serif', color:"black", fontSize:"2vw",fontWeight:"normal"}}>{"Bạn & Người Thương"}</Typography>
-                              <Typography sx={{fontFamily: '"Inter Variable", sans-serif', color:"black", fontSize:"2vw",fontWeight:"normal"}}>{"Đến dự buổi tiệc chung vui cùng gia đình chúng tôi"}</Typography>
+                              <Typography sx={{fontFamily: '"Inter Variable", sans-serif', color:"black", fontSize:"2.2vw",fontWeight:"normal"}}>{"TRÂN TRỌNG KÍNH MỜI"}</Typography>
+                              <Typography sx={{fontFamily: '"Inter Variable", sans-serif', color:"black", fontSize:"2.2vw",fontWeight:"normal"}}>{"Bạn & Người Thương"}</Typography>
+                              <Typography sx={{fontFamily: '"Inter Variable", sans-serif', color:"black", fontSize:"2.2vw",fontWeight:"normal"}}>{"Đến dự buổi tiệc chung vui cùng gia đình chúng tôi"}</Typography>
                               </Stack>
                             </>
                           )
@@ -399,9 +399,9 @@ function OpenCard({deviceType}) {
                           (
                             <>
                               <Stack direction={"column"} justifyContent={"center"} alignItems={"center"}>
-                              <Typography sx={{fontFamily: '"Inter Variable", sans-serif', color:"black", fontSize:"2vw",fontWeight:"normal"}}>{"Cordially invite our dear friend"}</Typography>
-                              <Typography sx={{fontFamily: '"Inter Variable", sans-serif', color:"black", fontSize:"2vw",fontWeight:"normal"}}>{"To join our families"}</Typography>
-                              <Typography sx={{fontFamily: '"Inter Variable", sans-serif', color:"black", fontSize:"2vw",fontWeight:"normal"}}>{"In celebrating our wedding reception"}</Typography>
+                              <Typography sx={{fontFamily: '"Inter Variable", sans-serif', color:"black", fontSize:"2.2vw",fontWeight:"normal"}}>{"Cordially invite our dear friend"}</Typography>
+                              <Typography sx={{fontFamily: '"Inter Variable", sans-serif', color:"black", fontSize:"2.2vw",fontWeight:"normal"}}>{"To join our families"}</Typography>
+                              <Typography sx={{fontFamily: '"Inter Variable", sans-serif', color:"black", fontSize:"2.2vw",fontWeight:"normal"}}>{"In celebrating our wedding reception"}</Typography>
                               </Stack>
                             </>
                           )
@@ -416,13 +416,13 @@ function OpenCard({deviceType}) {
               <Box ref={sectionRefs.section4} id="section4" sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                 <Grow in={visibleSections.section4} timeout={1000} style={{ transitionDelay: visibleSections.section4 ? '400ms' : '0ms' }}>
                   <div>
-                    <Stack direction="column" alignItems={"center"} mb={0}>
-                      <Stack direction={"row"}  position={"relative"} alignItems={"center"} justifyContent={"center"} mb={4}>
+                    <Stack mt={2} direction="column" alignItems={"center"} mb={2}>
+                      <Stack direction={"row"}  position={"relative"} alignItems={"center"} justifyContent={"center"} mb={6}>
 
                         <img src={savethedateImg} alt="logo" style={{width: deviceType == "Mobile" ? "35%" : "20%"}}/> 
                         <Stack  direction="column" alignItems={"center"} position={"absolute"} sx={{opacity:0.5}}>
-                          <Typography mt={deviceType == "Mobile" ? -1:  -3} ml={-1} mb={1} sx={{fontFamily: '"Buenard Variable", serif', color:"#c32b34", fontSize:"4vw", fontWeight:"bold"}}>30.11</Typography>
-                          <Typography mt={deviceType == "Mobile" ? -0.5 : -2} ml={1} sx={{fontFamily: '"Buenard Variable", serif', color:"#c32b34", fontSize:"4vw", fontWeight:"bold"}}>2025</Typography>
+                          <Typography mt={deviceType == "Mobile" ? -1:  -5} ml={-1} mb={1} sx={{fontFamily: '"Buenard Variable", serif', color:"#c32b34", fontSize:"6vw", fontWeight:"bold"}}>30.11</Typography>
+                          <Typography mt={deviceType == "Mobile" ? -0.5 : -6} ml={1} sx={{fontFamily: '"Buenard Variable", serif', color:"#c32b34", fontSize:"6vw", fontWeight:"bold"}}>2025</Typography>
                         </Stack>
                       </Stack>
                       <CountdownTimer isMobile={deviceType == "Mobile"} lang={lang}/>
