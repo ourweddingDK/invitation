@@ -525,7 +525,10 @@ function OpenCard({deviceType}) {
                       <Typography sx={{fontSize: '1em', fontWeight: 'bold', fontFamily:'"Inter Variable", sans-serif'}}>{lang == "VI" ? "VÀO LÚC 7:00" : "AT 7:00 AM"}</Typography>
                       <Typography sx={{fontSize: '1em', fontWeight: 'bold', fontFamily:'"Inter Variable", sans-serif'}}>{lang == "VI" ? "CHỦ NHẬT | NGÀY 30 . 11 . 2025" : "ON SUNDAY, NOVEMBER 30, 2025"}</Typography>
                       {lang == "VI" &&
-                      <Typography sx={{fontSize: '1em', fontFamily:'"Inter Variable", sans-serif'}}>(NHẰM NGÀY 11 THÁNG 10 NĂM ẤT TỴ)</Typography>
+                      <>
+                        <Typography sx={{fontSize: '1em', fontFamily:'"Inter Variable", sans-serif'}}>(NHẰM NGÀY 11 THÁNG 10</Typography>
+                        <Typography sx={{fontSize: '1em', fontFamily:'"Inter Variable", sans-serif'}}>NĂM ẤT TỴ)</Typography>
+                      </>
                       }
                     </Stack>
                     <img src={groomBrideImg} alt="logo" style={{width: "30%", height:"60%"}}/> 
