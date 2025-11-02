@@ -84,10 +84,10 @@ const generateCalendarDays = (year, month) => {
 
 const Calendar = ({ isMobile, lang, year = 2025, month = 11 }) => {
   const days = generateCalendarDays(year, month);
-  let weekdays = lang == "VI" ? ['T2', 'T3', 'T4', 'T5', 'T6', 'T7', 'CN'] : ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
+  let weekdays = lang == "VI" ? ['T2', 'T3', 'T4', 'T5', 'T6', 'T7', 'CN'] : ['M', 'T', 'W', 'T', 'F', 'S', 'S'];
 
   return (
-    <Box sx={{ p: 2 , width:isMobile ? "100%" : "40%"}}>
+    <Box sx={{ p: 2 , width:isMobile ? "100%" : "50%"}}>
       <CalendarHeader fontFamily={'"Inter Variable", sans-serif'}>{lang == "VI" ? "Tháng 11 - 2025" : "November - 2025"}</CalendarHeader>
        <Box sx={{width: "100%",  overflow: 'hidden' }}> 
       <TableContainer component={Paper} elevation={0} sx={{ width:"100%",justifyItems:"center"}}>
