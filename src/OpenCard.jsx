@@ -106,7 +106,7 @@ const images = [
   ];
 
 function OpenCard({deviceType}) {
-  const [lang, setLang] = useState('VI');
+  const [lang, setLang] = useState('EN');
   const [isMounted, setIsMounted] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   const [index, setIndex] = useState(-1);
@@ -125,12 +125,14 @@ function OpenCard({deviceType}) {
     section1: false,
     section2: false,
     section3: false,
+    section4 : false,
   });
 
   const sectionRefs = {
     section1: useRef(null),
     section2: useRef(null),
     section3: useRef(null),
+    section4: useRef(null),
   };
 
   useEffect(() => {
@@ -304,8 +306,10 @@ function OpenCard({deviceType}) {
                 </Swiper>
               </Box>
             </Box>
+            
             {/* <Typography sx={{fontFamily:'"Caveat Variable", cursive', color:"black", fontSize:""}}>{lang == "VI" ? "Anh đã đi tìm cả thế giới rộng lớn, nhưng chỉ khi thấy em là anh mới muốn dừng lại." : "oh there you are. i've been looking all over for you"}</Typography> */}
-            <Divider  width="30%" color="black"/>
+            <Box mt={4}></Box>
+            <Divider width="30%" color="black"/>
 
             <Stack id="time" mt={6} direction="column" alignItems={"center"} sx={{position: 'relative', border:"5px solid #fff3f3", borderRadius:"16px", width: deviceType == "Mobile" ? "96%" : "90%", pt:4, pb:4}} >
               <img
@@ -322,12 +326,59 @@ function OpenCard({deviceType}) {
               <Box ref={sectionRefs.section1} id="section1" sx={{display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                 <Grow in={visibleSections.section1} timeout={1000}>
                   <div>
-                    <Typography sx={{fontFamily: '"Great Vibes", cursive', color:"#d83536", fontSize:"5vw"}}>Đăng Khoa   &   Cao Đào</Typography>
+                    {
+                      lang == "VI" ?
+                      <>
+                       <Stack direction={"row"} spacing={4} justifyContent={"center"} alignContent={"center"} alignItems={"center"}>
+                        <Stack>
+                          <Typography sx={{fontSize: '2vw', fontWeight: 'bold',fontFamily:'"Inter Variable", sans-serif', color:"black"}}>Nhà Trai</Typography>
+                          <Typography sx={{fontSize: '2vw', fontWeight: 'bold',fontFamily:'"Inter Variable", sans-serif', color:"black"}}>Ba: NGUYỄN KIM HOÀN</Typography>
+                          <Typography sx={{fontSize: '2vw', fontWeight: 'bold',fontFamily:'"Inter Variable", sans-serif', color:"black"}}>Mẹ: PHẠM TRẦN MỸ NGỌC</Typography>
+                          <Typography sx={{fontSize: '2vw', fontWeight: 'normal',fontFamily:'"Inter Variable", sans-serif', color:"black"}}>Quận 7, TP. HCM</Typography>
+                        </Stack>
+                        <Divider  width="4px" orientation='vertical' color="black"/>
+                        <Stack>
+                          <Typography sx={{fontSize: '2vw', fontWeight: 'bold',fontFamily:'"Inter Variable", sans-serif', color:"black"}}>Nhà Gái</Typography>
+                          <Typography sx={{fontSize: '2vw', fontWeight: 'bold',fontFamily:'"Inter Variable", sans-serif', color:"black"}}>Bố: CAO ĐĂNG HOAN</Typography>
+                          <Typography sx={{fontSize: '2vw', fontWeight: 'bold',fontFamily:'"Inter Variable", sans-serif', color:"black"}}>Mẹ: NGUYỄN THỊ ĐAM</Typography>
+                          <Typography sx={{fontSize: '2vw', fontWeight: 'normal',fontFamily:'"Inter Variable", sans-serif', color:"black"}}>Hưng Hà, Thái Bình</Typography>
+                        </Stack>
+                      </Stack>
+                      <Typography mt={3} mb={3} sx={{ fontSize:"2vw", fontWeight: 'normal',fontFamily:'"Inter Variable", sans-serif', color:"black"}}>TRÂN TRỌNG BÁO TIN LỄ THÀNH HÔN CỦA CON CHÚNG TÔI</Typography>
+                      </>
+                      : 
+                      <>
+                      <Stack direction={"row"} spacing={4} justifyContent={"center"} alignContent={"center"} alignItems={"center"}>
+                        <Stack>
+                          <Typography sx={{fontSize: '2vw', fontWeight: 'bold',fontFamily:'"Inter Variable", sans-serif', color:"black"}}>MR NGUYEN KIM HOAN</Typography>
+                          <Typography sx={{fontSize: '2vw', fontWeight: 'bold',fontFamily:'"Inter Variable", sans-serif', color:"black"}}>MRS PHAM TRAN MY NGOC</Typography>
+                          <Typography sx={{fontSize: '2vw', fontWeight: 'normal',fontFamily:'"Inter Variable", sans-serif', color:"black"}}>District 7, HCM City</Typography>
+                        </Stack>
+                        <Divider  width="4px" orientation='vertical' color="black"/>
+                        <Stack>
+                          <Typography sx={{fontSize: '2vw', fontWeight: 'bold',fontFamily:'"Inter Variable", sans-serif', color:"black"}}>MR CAO DANG HOAN</Typography>
+                          <Typography sx={{fontSize: '2vw', fontWeight: 'bold',fontFamily:'"Inter Variable", sans-serif', color:"black"}}>MRS NGUYEN THI DAM</Typography>
+                          <Typography sx={{fontSize: '2vw', fontWeight: 'normal',fontFamily:'"Inter Variable", sans-serif', color:"black"}}>Hung Ha, Thai Binh</Typography>
+                        </Stack>
+                      </Stack>
+                      <Typography mt={3} mb={3} sx={{ fontSize:"2vw", fontWeight: 'normal',fontFamily:'"Inter Variable", sans-serif', color:"black"}}>HAVE THE HONOR OF ANNOUNCING THE MARRIAGE OF OUR CHILDREN</Typography>
+                      </>
+                    }
+                   <Divider  width="100%" color="black"/>
                   </div>
                 </Grow>
               </Box>
+
               <Box ref={sectionRefs.section2} id="section2" sx={{display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                 <Grow in={visibleSections.section2} timeout={1000} style={{ transitionDelay: visibleSections.section2 ? '200ms' : '0ms' }}>
+                  <div>
+                    <Typography mt={3} sx={{fontFamily: '"Great Vibes", cursive', color:"#d83536", fontSize:"5vw"}}>Đăng Khoa   &   Cao Đào</Typography>
+                  </div>
+                </Grow>
+              </Box>
+
+              <Box ref={sectionRefs.section3} id="section3" sx={{display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                <Grow in={visibleSections.section3} timeout={1000} style={{ transitionDelay: visibleSections.section3 ? '200ms' : '0ms' }}>
                   <div>
                     <Stack mt={-1} direction="row" justifyContent={"center"} alignItems={"center"} spacing={1} width={deviceType == "Mobile" ? "98%" : "100%"}>
                       <img src={groomEuImg} alt="logo" style={{width: "10%"}}/> 
@@ -336,22 +387,22 @@ function OpenCard({deviceType}) {
                         {
                           lang == "VI" ?
                           (
-                            <Stack direction={"column"} justifyContent={"center"} alignItems={"center"}>
-                            <Typography sx={{fontFamily: '"Inter Variable", sans-serif', color:"black", fontSize:"2vw",fontWeight:"normal"}}>{"TRÂN TRỌNG KÍNH MỜI"}</Typography>
-                            <Typography sx={{fontFamily: '"Inter Variable", sans-serif', color:"black", fontSize:"2vw",fontWeight:"normal"}}>{"Bạn và người thương"}</Typography>
-                            <Typography sx={{fontFamily: '"Inter Variable", sans-serif', color:"black", fontSize:"2vw",fontWeight:"normal"}}>{"Đến dự buổi tiệc chung vui cùng gia đình chúng tôi"}</Typography>
-                            </Stack>
+                            <>
+                              <Stack direction={"column"} justifyContent={"center"} alignItems={"center"}>
+                              <Typography sx={{fontFamily: '"Inter Variable", sans-serif', color:"black", fontSize:"2vw",fontWeight:"normal"}}>{"TRÂN TRỌNG KÍNH MỜI"}</Typography>
+                              <Typography sx={{fontFamily: '"Inter Variable", sans-serif', color:"black", fontSize:"2vw",fontWeight:"normal"}}>{"Bạn & Người Thương"}</Typography>
+                              <Typography sx={{fontFamily: '"Inter Variable", sans-serif', color:"black", fontSize:"2vw",fontWeight:"normal"}}>{"Đến dự buổi tiệc chung vui cùng gia đình chúng tôi"}</Typography>
+                              </Stack>
+                            </>
                           )
                           :
                           (
                             <>
-                            <Typography sx={{fontFamily: '"Inter Variable", sans-serif', color:"black", fontSize:"2vw",fontWeight:"normal"}}>We joyfully announce our marriage on</Typography>
-                            
-                            <Stack  direction="column" alignItems={"center"} mb={0}>
-                              <Typography mt={-2} ml={-1} mb={1} sx={{fontFamily: '"Buenard Variable", serif', color:"#c32b34", fontSize:"2.5vw", fontWeight:"bold"}}>30.11</Typography>
-                              {/* <Typography mt={deviceType == "Mobile" ? -0.5 : -2} sx={{fontFamily: '"Buenard Variable", serif', color:"#c32b34", fontSize:"2.5vw", fontWeight:"bold"}}>―</Typography> */}
-                              <Typography mt={deviceType == "Mobile" ? -0.5 : -2} ml={1} sx={{fontFamily: '"Buenard Variable", serif', color:"#c32b34", fontSize:"2.5vw", fontWeight:"bold"}}>2025</Typography>
-                            </Stack>
+                              <Stack direction={"column"} justifyContent={"center"} alignItems={"center"}>
+                              <Typography sx={{fontFamily: '"Inter Variable", sans-serif', color:"black", fontSize:"2vw",fontWeight:"normal"}}>{"Cordially invite our dear friend"}</Typography>
+                              <Typography sx={{fontFamily: '"Inter Variable", sans-serif', color:"black", fontSize:"2vw",fontWeight:"normal"}}>{"To join our families"}</Typography>
+                              <Typography sx={{fontFamily: '"Inter Variable", sans-serif', color:"black", fontSize:"2vw",fontWeight:"normal"}}>{"In celebrating our wedding reception"}</Typography>
+                              </Stack>
                             </>
                           )
                         }
@@ -362,11 +413,18 @@ function OpenCard({deviceType}) {
                   </div>
                 </Grow>
               </Box>
-              <Box ref={sectionRefs.section3} id="section3" sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                <Grow in={visibleSections.section3} timeout={1000} style={{ transitionDelay: visibleSections.section3 ? '400ms' : '0ms' }}>
+              <Box ref={sectionRefs.section4} id="section4" sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                <Grow in={visibleSections.section4} timeout={1000} style={{ transitionDelay: visibleSections.section4 ? '400ms' : '0ms' }}>
                   <div>
                     <Stack direction="column" alignItems={"center"} mb={0}>
-                      <img src={savethedateImg} alt="logo" style={{width: deviceType == "Mobile" ? "35%" : "20%"}}/> 
+                      <Stack direction={"row"}  position={"relative"} alignItems={"center"} justifyContent={"center"} mb={4}>
+
+                        <img src={savethedateImg} alt="logo" style={{width: deviceType == "Mobile" ? "35%" : "20%"}}/> 
+                        <Stack  direction="column" alignItems={"center"} position={"absolute"} sx={{opacity:0.5}}>
+                          <Typography mt={deviceType == "Mobile" ? -1:  -3} ml={-1} mb={1} sx={{fontFamily: '"Buenard Variable", serif', color:"#c32b34", fontSize:"4vw", fontWeight:"bold"}}>30.11</Typography>
+                          <Typography mt={deviceType == "Mobile" ? -0.5 : -2} ml={1} sx={{fontFamily: '"Buenard Variable", serif', color:"#c32b34", fontSize:"4vw", fontWeight:"bold"}}>2025</Typography>
+                        </Stack>
+                      </Stack>
                       <CountdownTimer isMobile={deviceType == "Mobile"} lang={lang}/>
                     </Stack>
                   </div>
@@ -382,8 +440,8 @@ function OpenCard({deviceType}) {
                   position: 'absolute',
                   top: 0,
                   right: 0,
-                  width: '15%',
-                  height: '20%',
+                  width: '8%',
+                  height: '12%',
                 }}
               />
               <img
@@ -397,13 +455,14 @@ function OpenCard({deviceType}) {
                   height: '10%',
                 }}
               />
-              <Typography sx={{fontFamily:'"Caveat Variable", cursive', color:"#c32b34", fontSize:"2em"}}>{lang == "VI" ? "Những Khoảnh Khắc Ngọt Ngào 📸 " : "sweet moments captured 📸 "}</Typography>
+              <Typography sx={{fontFamily:'"Inter Variable", sans-serif', color:"#c32b34", fontSize:"1.5em"}}>{lang == "VI" ? "Khoảnh Khắc Ngọt Ngào " : "Sweet moments captured"}</Typography>
+              <Typography sx={{fontFamily:'"Inter Variable", sans-serif', color:"#c32b34", fontSize:"1.5em"}}>{"📷"}</Typography>
               <Stack sx={{ p: 1, width:"98%",backgroundColor:"white" }} >
                 <FloatingHearts isMobile={deviceType=="Mobile"} isFlower={true}/>
                 <RowsPhotoAlbum
                   photos={images}
-                  padding={15}
-                  spacing={15}
+                  padding={10}
+                  spacing={6}
                   rowConstraints={100}
                   onClick={({ index: currentIndex }) => setIndex(currentIndex)}
                 />
@@ -439,13 +498,13 @@ function OpenCard({deviceType}) {
                   height: '8%',
                 }}
               />
-              <Typography sx={{fontFamily:'"Caveat Variable", cursive', color:"black", fontSize:"1.8em"}}>{lang == "VI" ? "- Sự Kiện -" : "- Event -"}</Typography>
-              <Typography sx={{fontFamily:'"Caveat Variable", cursive', color:"#c32b34", fontSize:"2.2em"}}>{lang == "VI" ? "⌛ Khi nào & Ở đâu 💒" : "⌛ When & Where 💒"}</Typography>
+              <Typography sx={{fontFamily:'"Inter Variable", sans-serif', color:"#c32b34", fontSize:"1.5em"}}>{lang == "VI" ? "- Sự Kiện -" : "⌛ Events💒"}</Typography>
+              {/* <Typography sx={{fontFamily:'"Inter Variable", sans-serif', color:"#c32b34", fontSize:"2.2em"}}>{lang == "VI" ? "⌛ Khi nào & Ở đâu 💒" : "⌛ When & Where 💒"}</Typography> */}
               <Stack direction={"column"} mt={5} mb={2} alignItems={"center"} sx={{ width:"100%"}}>
                 <Stack direction={deviceType == "Mobile" || window.innerWidth < 500 ? "column" : "row"} sx={{ width:"100%"}}>
                   <Calendar isMobile={deviceType == "Mobile" || window.innerWidth < 500} lang={lang}/>
                   <Stack direction={deviceType == "Mobile" || window.innerWidth < 500 ? "column" : "row"} mt={0} mb={1} spacing={1} alignItems={"center"} border="2px solid #f9c2c6" borderRadius={"20px"} margin={2}>
-                    <Stack direction={"column"} textAlign={"start"} padding={1}>
+                    <Stack direction={"column"} textAlign={deviceType != "Mobile" ? "start" : "center"} padding={1}>
                       <Typography sx={{fontSize: '1em', fontWeight: 'normal',fontFamily:'"Inter Variable", sans-serif'}}>{lang == "VI" ? "HÔN LỄ ĐƯỢC CỬ HÀNH TẠI TƯ GIA" : "THE WEDDING CEREMONY WILL BE HELD AT THE BRIDGE'S RESIDENCE"}</Typography>
                       <a
                         href="https://maps.app.goo.gl/SsFxvmNFH6DpQz8z5"
@@ -461,7 +520,7 @@ function OpenCard({deviceType}) {
                         onMouseOver={(e) => (e.target.style.color = 'red')}
                         onMouseOut={(e) => (e.target.style.color = 'blue')}
                       >
-                        (<LocationOnOutlinedIcon/>{lang == "VI" ? "NHÀ BÈ, TP.HỒ CHÍ MINH" : "NHA BE, HCM CITY"})
+                        <LocationOnOutlinedIcon/>{lang == "VI" ? "NHÀ BÈ, TP.HỒ CHÍ MINH" : "NHA BE, HCM CITY"}
                       </a>
                       <Typography sx={{fontSize: '1em', fontWeight: 'bold', fontFamily:'"Inter Variable", sans-serif'}}>{lang == "VI" ? "VÀO LÚC 7:00" : "AT 7:00 AM"}</Typography>
                       <Typography sx={{fontSize: '1em', fontWeight: 'bold', fontFamily:'"Inter Variable", sans-serif'}}>{lang == "VI" ? "CHỦ NHẬT | NGÀY 30 . 11 . 2025" : "ON SUNDAY, NOVEMBER 30, 2025"}</Typography>
@@ -475,7 +534,7 @@ function OpenCard({deviceType}) {
                 <Stack direction={deviceType == "Mobile" ? "column" : "row"} width={"98%"}>
                   <Stack direction={deviceType == "Mobile" ? "column" : "row"} width={"100%"} p={2} mt={0} mb={1} spacing={2} alignItems={"center"} border="2px solid #f9c2c6" borderRadius={"20px"}>
                     <img src={restaurantImg} alt="logo" style={{width: "40%", height:"60%"}}/> 
-                    <Stack direction={"column"} textAlign={"start"} padding={2}>
+                    <Stack direction={"column"} textAlign={deviceType != "Mobile" ? "start" : "center"} padding={2}>
                       <Typography sx={{fontSize: '1em', fontWeight: 'normal', fontFamily:'"Inter Variable", sans-serif'}}>{lang == "VI" ? "TRÂN TRỌNG KÍNH MỜI QUÝ KHÁCH ĐẾN DỰ BUỔI TIỆC CHUNG VUI CÙNG GIA ĐÌNH CHÚNG TÔI TẠI KHÁCH SẠN" : "CORDIALLY INVITE YOU TO JOIN OUR FAMILIES IN CELEBRATING OUR WEDDING RECEPTION AT HOTEL"}</Typography>
                       <Typography sx={{fontFamily:'"Prata", serif', fontSize: '1.5em', fontWeight: 'bold', color:"red"}}>MERPERLE CRYSTAL PALACE</Typography>
                       <Typography sx={{fontSize: '0.8em', fontFamily:'"Inter Variable", sans-serif'}}>{lang == "VI" ? "SẢNH DIAMOND - TẦNG 3" : "DIAMOND HALL - 3RD FLOOR"}</Typography>
@@ -503,8 +562,8 @@ function OpenCard({deviceType}) {
               </Stack>
             </Stack>
             <Stack mb={4} width="100%" height="50vh" justifyContent={"center"} alignItems={"center"}>
-              <Typography sx={{ color:"#bb3e32", fontSize:lang == "VI" ? "1.2em":"2em", fontFamily: '"Caveat Variable", cursive'}}>{lang == "VI" ? "SỰ HIỆN DIỆN CỦA QUÝ KHÁCH LÀ NIỀM VINH HẠNH CHO GIA ĐÌNH CHÚNG TÔI" : "YOUR PRESENCE WILL BE OUR GREATEST HONOR."}</Typography>
-              {lang == "VI" && <Typography sx={{ color:"#bb3e32", fontSize:"1.2em", fontFamily: '"Caveat Variable", cursive'}}>RẤT HÂN HẠNH ĐƯỢC ĐÓN TIẾP!</Typography>}
+              <Typography sx={{ color:"#bb3e32", fontSize:lang == "VI" ? "1.2em":"2em", fontFamily: '"Inter Variable", sans-serif'}}>{lang == "VI" ? "SỰ HIỆN DIỆN CỦA QUÝ KHÁCH LÀ NIỀM VINH HẠNH CHO GIA ĐÌNH CHÚNG TÔI" : "YOUR PRESENCE WILL BE OUR GREATEST HONOR."}</Typography>
+              {lang == "VI" && <Typography sx={{ color:"#bb3e32", fontSize:"1.2em", fontFamily: '"Inter Variable", sans-serif'}}>RẤT HÂN HẠNH ĐƯỢC ĐÓN TIẾP!</Typography>}
               <img src={flowerImg} alt="logo" style={{width: deviceType == "Mobile" ? "20%" : "10%", height:"60%"}}/>
             </Stack>
           </Stack>

@@ -10,7 +10,7 @@ import {
   Box,
 } from '@mui/material';
 import { styled } from '@mui/material/styles';
-import '@fontsource-variable/caveat';
+import '@fontsource-variable/inter';
 
 const CalendarHeader = styled(Typography)(({ theme }) => ({
   fontSize: '1em',
@@ -18,7 +18,7 @@ const CalendarHeader = styled(Typography)(({ theme }) => ({
   textAlign: 'center',
   marginBottom: theme.spacing(2),
   color: theme.palette.text.primary,
-  fontFamily: '"Caveat Variable", cursive'
+  fontFamily: '"Inter Variable", sans-serif'
 }));
 
 const DayCell = styled(TableCell)(({ theme, isCurrentMonth, isToday, isWeekend, hasHeart }) => ({
@@ -30,7 +30,7 @@ const DayCell = styled(TableCell)(({ theme, isCurrentMonth, isToday, isWeekend, 
   fontWeight: isToday ? 'bold' : 'normal',
   fontSize: '0.8em',
   position: 'relative',
-  fontFamily: '"Caveat Variable", cursive',
+  fontFamily: '"Inter Variable", sans-serif',
   ...(isWeekend && {
     color: isCurrentMonth && !isToday ? theme.palette.text.primary : isCurrentMonth && isToday ? "red" : undefined,
   }),
@@ -84,11 +84,11 @@ const generateCalendarDays = (year, month) => {
 
 const Calendar = ({ isMobile, lang, year = 2025, month = 11 }) => {
   const days = generateCalendarDays(year, month);
-  let weekdays = lang == "VI" ? ['H', 'B', 'T', 'N', 'S', 'B', 'CN'] : ['M', 'T', 'W', 'T', 'F', 'S', 'S'];
+  let weekdays = lang == "VI" ? ['T2', 'T3', 'T4', 'T5', 'T6', 'T7', 'CN'] : ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
 
   return (
     <Box sx={{ p: 2 , width:isMobile ? "100%" : "40%"}}>
-      <CalendarHeader fontFamily={'"Caveat Variable", cursive'}>{lang == "VI" ? "Tháng 11 - 2025" : "November - 2025"}</CalendarHeader>
+      <CalendarHeader fontFamily={'"Inter Variable", sans-serif'}>{lang == "VI" ? "Tháng 11 - 2025" : "November - 2025"}</CalendarHeader>
        <Box sx={{width: "100%",  overflow: 'hidden' }}> 
       <TableContainer component={Paper} elevation={0} sx={{ width:"100%",justifyItems:"center"}}>
         <Table size="small" sx={{ width:"50%"}}>
@@ -102,7 +102,7 @@ const Calendar = ({ isMobile, lang, year = 2025, month = 11 }) => {
                     height: "100%",
                     textAlign: 'center',
                     fontWeight: 'bold',
-                    fontFamily: '"Caveat Variable", cursive',
+                    fontFamily: '"Inter Variable", sans-serif',
                     border: 'none',
                     backgroundColor: 'grey.100',
                   }}
